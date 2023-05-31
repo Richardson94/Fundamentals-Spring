@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http:///www.thymeleaf.org">
+
+<head>
+	<title th:text="${title}">
+	</title>
+</head>
+
+<body>
+	<h1 th:text="${title}"></h1>
+	<div>
+		The First parameter is : <span style="color: blueviolet;" th:text="${parameterOne}"></span>
+		<br>
+		The Second parameter is : <span style="color: red;" th:text="${parameterTwo}"></span>
+	</div>
+	
+	<div>
+		<h2>Parameter received by path</h2>
+		The player is: <span style="color: blueviolet;" th:text="${player.getName()}"></span>
+		(<span style="color: blueviolet;" th:text="${player.getNumber()}"></span>)
+	</div>
+	
+</body>
+
+</html>
