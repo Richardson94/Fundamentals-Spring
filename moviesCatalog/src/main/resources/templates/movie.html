@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:insert="layouts/head"></head>
+
+<body>
+	<header th:insert="layouts/header">
+	</header>
+	<div class="container">
+		<form th:action="@{/movie}" th:object="${movie}" method="post" class="col-md-6 offset-md-3">
+			<h2 th:text="${title}" class="py-4"> </h2>
+			<div class="row mb-3">
+				<label for="name" class="col-sm-2 col-form-label" >Name</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="name" th:field="*{name}">
+				</div>
+			</div>
+			<div class="row mb-3">
+				<label for="release_date" class="col-sm-2 col-form-label">Release Date</label>
+				<div class="col-sm-10">
+					<input type="date" class="form-control" id="release_date" th:field="*{releaseDate}">
+				</div>
+			</div>
+			<div class="row mb-3">
+				<label for="gender" class="col-sm-2 col-form-label">Gender</label>
+				<div class="col-sm-10">
+					<select class="form-select" th:field="*{gender}">
+						<option th:each="genders : ${genders}" th:text="${genders.name}" th:value="${genders.id}"></option>
+					</select>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary float-end">Save </button>
+		</form>
+	</div>
+
+</body>
+
+</html>

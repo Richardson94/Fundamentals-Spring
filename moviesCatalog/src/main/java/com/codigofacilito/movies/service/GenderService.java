@@ -2,6 +2,7 @@ package com.codigofacilito.movies.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.codigofacilito.movies.dao.IGenderRepository;
@@ -10,6 +11,7 @@ import com.codigofacilito.movies.entities.Gender;
 @Service
 public class GenderService implements IGenderService {
 
+	@Autowired
 	private IGenderRepository genderRepository;
 
 	@Override
