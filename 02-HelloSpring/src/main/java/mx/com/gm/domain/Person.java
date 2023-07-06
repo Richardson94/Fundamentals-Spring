@@ -1,9 +1,19 @@
 package mx.com.gm.domain;
 
 import lombok.Data;
+import java.io.Serializable;
+import javax.persistence.*;
 
 @Data
-public class Person {
+@Entity
+@Table(name = "person")
+public class Person implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idPerson;
     private String name;
     private String lastName;
     private String email;

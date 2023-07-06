@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class HelloSpringApplication {
 
 	public static void main(String[] args) {
-        Connection con;
+       /* Connection con;
         PreparedStatement pst;
 
         try{
@@ -21,7 +21,7 @@ public class HelloSpringApplication {
         catch(SQLException ex){
             ex.printStackTrace();
         }
-
+*/
 		SpringApplication.run(HelloSpringApplication.class, args);
 	}
 
