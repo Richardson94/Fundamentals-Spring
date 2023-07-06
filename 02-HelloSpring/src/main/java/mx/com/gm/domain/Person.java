@@ -1,8 +1,9 @@
 package mx.com.gm.domain;
 
+import javax.persistence.Entity;
 import lombok.Data;
 import java.io.Serializable;
-import javax.persistence.*;
+
 
 @Data
 @Entity
