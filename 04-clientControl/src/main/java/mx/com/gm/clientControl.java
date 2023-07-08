@@ -1,11 +1,10 @@
 package mx.com.gm;
-import java.sql.*;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HelloSpringApplication {
+public class clientControl {
 
 	public static void main(String[] args) {
        /* Connection con;
@@ -22,7 +21,7 @@ public class HelloSpringApplication {
             ex.printStackTrace();
         }
 */
-		SpringApplication.run(HelloSpringApplication.class, args);
+		SpringApplication.run(clientControl.class, args);
 	}
 
 }
