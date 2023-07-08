@@ -2,11 +2,13 @@
 package mx.com.gm.web;
 
 import lombok.extern.slf4j.Slf4j;
+import mx.com.gm.domain.Person;
 import mx.com.gm.service.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 
 @Controller
@@ -19,5 +21,16 @@ public class ControllerHome {
         var persons = personService.listPersons();
 
         return "index";
+    }
+
+    @GetMapping("/add")
+    public String Add(Person person){
+     return "modify";
+    }
+
+    @PostMapping("/save")
+    public String save(Person person){
+        personService.save(person);
+        return "redirect:/";
     }
 }
