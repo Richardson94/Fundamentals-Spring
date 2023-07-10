@@ -9,7 +9,7 @@
 <a th:href="@{/}"></a>
 <br/>
 <form th:action="@{/save}" method="post" th:object="${person}">
-
+    <input type="hidden" name="idPerson" th:field="*{idPerson}">
     <label for="name">Name:</label>
     <input type="text" name="name" th:field="*{name}"/>
 

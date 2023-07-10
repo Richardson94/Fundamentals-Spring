@@ -7,7 +7,7 @@
 <body>
 <div>Hello World from HOME 2</div>
 <a th:href="@{/add}"></a>
-<!--
+
 <p th:text="${message}"></p>
 
 <br/>
@@ -26,17 +26,20 @@ Phone: <span th:text="${Person.phone}"></span>
             <th>Last Name</th>
             <th>Email</th>
             <th>Phone</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
         <tr th:each="personData : ${PersonsList}">
             <td th:text="${personData.name}">Name</td>
             <td th:text="${personData.lastName}">Last Name</td>
             <td th:text="${personData.email}">Email</td>
             <td th:text="${personData.phone}">Phone</td>
+            <td><a th:href="@{/edit/} + ${personData.idPerson}" th:text="Edit"></a></td>
         </tr>
     </table>
 </div>
 <div th:if="${PersonsList == null or PersonsList.empty}">
     <h2>The list of persons is empty</h2>
-</div>-->
+</div>
 </body>
 </html>
