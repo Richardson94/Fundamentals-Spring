@@ -40,4 +40,10 @@ public class ControllerHome {
         model.addAttribute("person",person);
         return "modify";
     }
+
+    @GetMapping("/delete/{idPerson}")
+    public String delete(Person person){
+        personService.delete(person);
+        return "redirect:/";
+    }
 }

@@ -35,6 +35,7 @@ Phone: <span th:text="${Person.phone}"></span>
             <td th:text="${personData.email}">Email</td>
             <td th:text="${personData.phone}">Phone</td>
             <td><a th:href="@{/edit/} + ${personData.idPerson}" th:text="Edit"></a></td>
+            <td><a th:href="@{/delete(idPerson= ${personData.idPerson})" th:text="Delete"></a></td>
         </tr>
     </table>
 </div>
