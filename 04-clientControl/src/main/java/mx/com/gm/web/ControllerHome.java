@@ -7,6 +7,7 @@ import mx.com.gm.service.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -29,7 +30,10 @@ public class ControllerHome {
     }
 
     @PostMapping("/save")
-    public String save(Person person){
+    public String save(@Valid Person person, Errors errors){
+        if(errors.hasErrors()){
+            return "modify";
+        }
         personService.save(person);
         return "redirect:/";
     }

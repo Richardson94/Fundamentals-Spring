@@ -12,12 +12,16 @@
     <input type="hidden" name="idPerson" th:field="*{idPerson}">
     <label for="name">Name:</label>
     <input type="text" name="name" th:field="*{name}"/>
-
+    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Error in the Name</span>
+    <br/>
     <label for="lastName">Last Name:</label>
     <input type="text" name="lastName" th:field="*{lastName}"/>
-
+    <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Error in the Last Name</span>
+    <br/>
     <label for="mail">Email:</label>
     <input type="text" name="mail" th:field="*{mail}"/>
+    <span th:if="${#fields.hasErrors('mail')}" th:errors="*{mail}">Error in the Mail</span>
+    <br/>
 
     <label for="phone">Phone:</label>
     <input type="tel" name="phone" th:field="*{phone}"/>
