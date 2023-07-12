@@ -5,7 +5,7 @@
     <title>Home</title>
 </head>
 <body>
-<div>Hello World from HOME 2</div>
+<header th:replace="layout/template :: header"></header>
 <a th:href="@{/add}"></a>
 
 <p th:text="${message}"></p>
@@ -42,5 +42,7 @@ Phone: <span th:text="${Person.phone}"></span>
 <div th:if="${PersonsList == null or PersonsList.empty}">
     <h2>The list of persons is empty</h2>
 </div>
+
+<footer th:replace="layout/template :: footer"></footer>
 </body>
 </html>

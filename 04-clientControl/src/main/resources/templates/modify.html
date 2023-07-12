@@ -5,7 +5,9 @@
     <title>Data of the Person</title>
 </head>
 <body>
-<h1>Data of the person</h1>
+<header th:replace="layout/template :: header"></header>
+<hr/>
+<h2>Data of the person</h2>
 <a th:href="@{/}"></a>
 <br/>
 <form th:action="@{/save}" method="post" th:object="${person}">
@@ -28,5 +30,6 @@
     <br/>
     <input type="submit" name="save" value="Save"/>
 </form>
+    <footer th:replace="layout/template :: footer"></footer>
 </body>
 </html>
