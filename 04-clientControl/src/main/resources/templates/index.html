@@ -6,7 +6,7 @@
 </head>
 <body>
 <header th:replace="layout/template :: header"></header>
-<a th:href="@{/add}"></a>
+<a th:href="@{/add}">[[#{person.add}]]</a>
 
 <p th:text="${message}"></p>
 
@@ -22,12 +22,12 @@ Phone: <span th:text="${Person.phone}"></span>
 <div th:if="${PersonsList != null and !PersonsList.empty}">
     <table border="1">
         <tr>
-            <th>Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>[[#{person.name}]]</th>
+            <th>[[#{person.lastName}]]</th>
+            <th>[[#{person.email}]]</th>
+            <th>[[#{person.phone}]]</th>
+            <th>[[#{action.edit}]]</th>
+            <th>[[#{action.delete}]]</th>
         </tr>
         <tr th:each="personData : ${PersonsList}">
             <td th:text="${personData.name}">Name</td>
