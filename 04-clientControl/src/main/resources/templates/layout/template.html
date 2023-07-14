@@ -10,7 +10,12 @@
     </header>
 
     <footer th:fragment="footer">
-        <p th:text="#{template.footerPage}">foot</p>
+        <div>
+            <br/>
+            <a th:href="@{/(lang=es)}">ES</a> |
+            <a th:href="@{/(lang=en)}">EN</a> |
+        </div>
+        <span th:text="#{template.footerPage}">foot</span>
     </footer>
 </body>
 </html>
