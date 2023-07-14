@@ -6,11 +6,11 @@
 </head>
 <body>
     <header th:fragment="header">
-        <h1>Control of Clients</h1>
+        <h1 th:text="#{template.title}">title</h1>
     </header>
 
     <footer th:fragment="footer">
-        <p>All rights reserved</p>
+        <p th:text="#{template.footerPage}">foot</p>
     </footer>
 </body>
 </html>
